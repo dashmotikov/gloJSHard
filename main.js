@@ -1,13 +1,49 @@
-let num = 266219;
-let res = 1;
+'use strict';
 
-for (let i = 0; i < num.toString().length; i++) {
-  res *= Number(num.toString()[i]);
+let lang = 'ru';
+
+let ruDays = [
+  'Понедельник',
+  'Вторник',
+  'Среда',
+  'Четверг',
+  'Пятница',
+  'Суббота',
+  'Воскресенье',
+];
+let enDays = [
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday',
+];
+
+//Решение через if
+if (lang === 'ru') {
+  console.log(ruDays);
+} else if (lang === en) {
+  console.log(enDays);
 }
-console.log(res);
 
-let res2 = res ** 3;
-console.log(res2);
+//Решение через switch-case
 
-let res3 = String(res2).slice(0, 2);
-console.log(res3);
+switch (lang) {
+  case 'ru':
+    console.log(ruDays);
+    break;
+  case 'en':
+    console.log(enDays);
+    break;
+}
+
+//Усложненное задание № 2
+
+let namePerson = 'Артем';
+namePerson === 'Артем'
+  ? console.log('Директор')
+  : namePerson === 'Александр'
+  ? console.log('Преподаватель')
+  : console.log('Студент');
