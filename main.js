@@ -1,49 +1,15 @@
 'use strict';
+let test = '123456789012345678901234567890123456';
 
-let lang = 'ru';
+function cutString(string) {
+  if (typeof string !== 'string') {
+    //если передали не строку - выкинуть ошибку и выйти из программы
+    console.error('Вы передали не строку');
+    return;
+  }
 
-let ruDays = [
-  'Понедельник',
-  'Вторник',
-  'Среда',
-  'Четверг',
-  'Пятница',
-  'Суббота',
-  'Воскресенье',
-];
-let enDays = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday',
-];
-
-//Решение через if
-if (lang === 'ru') {
-  console.log(ruDays);
-} else if (lang === en) {
-  console.log(enDays);
+  string = string.trim();
+  if (string.length > 30) {
+    return string.split('').slice(0, 30).join('') + '...';
+  }
 }
-
-//Решение через switch-case
-
-switch (lang) {
-  case 'ru':
-    console.log(ruDays);
-    break;
-  case 'en':
-    console.log(enDays);
-    break;
-}
-
-//Усложненное задание № 2
-
-let namePerson = 'Артем';
-namePerson === 'Артем'
-  ? console.log('Директор')
-  : namePerson === 'Александр'
-  ? console.log('Преподаватель')
-  : console.log('Студент');
