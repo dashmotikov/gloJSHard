@@ -1,4 +1,3 @@
-'use strict';
 let test = '123456789012345678901234567890123456';
 
 function cutString(string) {
@@ -12,4 +11,6 @@ function cutString(string) {
   if (string.length > 30) {
     return string.split('').slice(0, 30).join('') + '...';
   }
+
+  return string;
 }
