@@ -14,3 +14,5 @@ function cutString(string) {
 
   return string;
 }
+
+console.log(cutString(test));
