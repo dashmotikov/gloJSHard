@@ -7,3 +7,14 @@ arr.forEach((item, index) => {
     console.log(item);
   }
 });
+
+let n = 100;
+
+primeNumbers: for (let i = 2; i <= n; i++) {
+  let divisors = [1, i];
+
+  for (let j = 2; j * j <= i; j++) {
+    if (i % j === 0) continue primeNumbers;
+  }
+  console.log(`${i} - Делители этого числа: 1 и ${i}`);
+}
