@@ -11,8 +11,6 @@ arr.forEach((item, index) => {
 let n = 100;
 
 primeNumbers: for (let i = 2; i <= n; i++) {
-  let divisors = [1, i];
-
   for (let j = 2; j * j <= i; j++) {
     if (i % j === 0) continue primeNumbers;
   }
