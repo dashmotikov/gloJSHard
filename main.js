@@ -16,3 +16,15 @@ primeNumbers: for (let i = 2; i <= n; i++) {
   }
   console.log(`${i} - Делители этого числа: 1 и ${i}`);
 }
+
+/*for (let i = 0; i <= 100; i++) {
+  let cnt = 0;
+  for (let j = 1; j <= i; j++) {
+    if (i % j === 0) {
+      cnt++;
+    }
+  }
+  if (cnt === 2) {
+    console.log(`Число ${i}: Делители этого числа 1 и ${i}`);
+  }
+}*/
